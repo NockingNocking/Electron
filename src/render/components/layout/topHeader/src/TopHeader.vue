@@ -3,6 +3,11 @@
     <div class="content">1233211234567</div>
   </div>
 </template>
+<script>
+export default {
+  name: 'TopHeader'
+}
+</script>
 
 <script lang="ts" setup>
 import { reactive, toRefs, ref } from 'vue'

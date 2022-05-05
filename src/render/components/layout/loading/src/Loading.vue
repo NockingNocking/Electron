@@ -4,6 +4,11 @@
     <a-spin :spinning="isTip" :tip="tip" />
   </div>
 </template>
+<script>
+export default {
+  name: 'Loading'
+}
+</script>
 
 <script lang="ts" setup>
 interface Props {

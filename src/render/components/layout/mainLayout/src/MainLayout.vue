@@ -1,9 +1,13 @@
 <template>
-  <div id="container"></div>
+  <div id="container">2589625416465</div>
 </template>
-
+<script>
+export default {
+  name: 'MainLayout'
+}
+</script>
 <script lang="ts" setup>
-import { reactive, toRefs, ref } from 'vue'
+import { computed, defineComponent, PropType } from 'vue'
 </script>
 <style scoped lang="scss">
 #container {

@@ -1,11 +1,12 @@
 <template>
   <div>
-    <mainlayout><top-header></top-header> </mainlayout>
+    <MainLayout></MainLayout>
   </div>
 </template>
 
 <script lang="ts" setup>
 import { onMounted, onBeforeMount } from 'vue'
+// import mainlayout from '../components/layout/mainLayout'
 // import { storeToRefs } from 'pinia'
 // import { useUserStore } from '../store/index'
 
