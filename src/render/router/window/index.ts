@@ -2,19 +2,16 @@ import { RouteRecordRaw } from 'vue-router'
 
 const configRoutes: Array<RouteRecordRaw> = [
   {
-    path: '/loadingWin',
-    name: 'loadingWin',
-    component: () => import('@/views/Loading.vue')
-  },
-  {
-    path: '/login',
-    name: 'login',
-    component: () => import('@/views/Login.vue')
-  },
-  {
     path: '/defaultWin',
     name: 'defaultWin',
-    component: () => import('@/views/DefaultWin.vue')
+    component: () => import('@/views/window/DefaultWin.vue'),
+    redirect: '/defaultWin/index',
+    children: [
+      {
+        path: 'index',
+        component: () => import('@/views/window/pages/index.vue')
+      }
+    ]
   },
   {
     path: '/menuOne',

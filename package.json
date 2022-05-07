@@ -1,9 +1,9 @@
 {
-  "name": "rabbit",
+  "name": "visited",
   "version": "1.0.0",
-  "description": "a small rabbit",
+  "description": "a small visited",
   "main": "dist/main/index.js",
-  "author": "rabbit",
+  "author": "Nocking",
   "license": "MIT",
   "scripts": {
     "format": "npx prettier --write .",
@@ -24,7 +24,7 @@
     "linux": "npm run build && electron-builder --linux"
   },
   "build": {
-    "appId": "com.app.rabbit",
+    "appId": "com.app.visited",
     "asar": true,
     "copyright": "",
     "directories": {
@@ -39,7 +39,7 @@
       "installerHeaderIcon": "dist/favicon.ico",
       "createDesktopShortcut": true,
       "createStartMenuShortcut": true,
-      "shortcutName": "rabbit",
+      "shortcutName": "visited",
       "deleteAppDataOnUninstall": true,
       "include": "./installer.nsh"
     },
@@ -75,7 +75,7 @@
     }
   },
   "dependencies": {
-    "@vueuse/core": "^8.2.0",
+    "@vueuse/core": "^8.4.2",
     "axios": "^0.26.1",
     "pinia": "^2.0.12",
     "pinia-plugin-persist": "^1.0.0"
@@ -97,7 +97,9 @@
     "@typescript-eslint/eslint-plugin": "^4.31.2",
     "@typescript-eslint/parser": "^4.31.2",
     "@vitejs/plugin-vue": "^1.3.0",
+    "@vitejs/plugin-vue-jsx": "^1.3.10",
     "@vue/compiler-sfc": "^3.2.11",
+    "@vueuse/components": "^8.4.2",
     "ant-design-vue": "^2.2.8",
     "chalk": "^4.1.0",
     "concurrently": "^6.0.0",

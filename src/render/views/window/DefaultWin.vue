@@ -1,6 +1,7 @@
 <template>
   <div>
-    <MainLayout></MainLayout>
+    <TopHeader />
+    <router-view></router-view>
   </div>
 </template>
 
@@ -14,10 +15,6 @@ import { onMounted, onBeforeMount } from 'vue'
 
 // const { age, sex, name } = storeToRefs(userStore) // 响应式
 // console.log(age, sex, name.value)
-
-onBeforeMount(() => {
-  console.log(25896)
-})
 
 onMounted(() => {
   // 向主进程发送创建完毕消息

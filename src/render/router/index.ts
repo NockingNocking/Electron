@@ -1,5 +1,5 @@
 import { createRouter, createWebHashHistory, RouteRecordRaw } from 'vue-router'
-import configRoutes from './configs'
+import configRoutes from './window'
 
 const routes: Array<RouteRecordRaw> = [...configRoutes]
 

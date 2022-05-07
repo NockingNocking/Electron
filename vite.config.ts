@@ -3,10 +3,11 @@ require('dotenv').config({ path: join(__dirname, '.env') })
 import { join } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
+import vueJsx from '@vitejs/plugin-vue-jsx'
 
 export default defineConfig((env: any) => {
   return {
-    plugins: [vue()],
+    plugins: [vue(), vueJsx({})],
     root: join(__dirname, 'src/render'),
     base: './',
     server: {
@@ -21,7 +22,8 @@ export default defineConfig((env: any) => {
     css: {
       preprocessorOptions: {
         scss: {
-          additionalData: "@import '@/variables.scss';"
+          // 不能在这里引入 没效果，直接去main.ts里面引入全局文件
+          // additionalData: "@use '@/style/index.scss';"
         }
       }
     },

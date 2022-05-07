@@ -1,4 +1,5 @@
-import { setTray, createDefaultWindow, createLoadingWindow } from './window'
+import { setTray, createDefaultWindow } from './window'
+// createLoadingWindow
 import { app, Menu, ipcMain } from 'electron'
 
 // 关闭菜单栏
@@ -10,7 +11,7 @@ if (!gotTheLock) app.quit()
 
 app.whenReady().then(() => {
   const defaultWindow = createDefaultWindow() // 创建默认窗口
-  const loadingWindow = createLoadingWindow() // 创建加载窗口
+  // const loadingWindow = createLoadingWindow() // 创建加载窗口
   // 监听渲染进程崩溃或被杀死，重新运行程序
   defaultWindow.webContents.on('render-process-gone', () => {
     app.relaunch()
@@ -29,7 +30,7 @@ app.whenReady().then(() => {
   ipcMain.on('main-window-created', (event, arg) => {
     if (arg) {
       setTimeout(() => {
-        loadingWindow.close()
+        // loadingWindow.close()
         defaultWindow.show()
         setTray()
       }, 3000)
